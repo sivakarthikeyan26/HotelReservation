@@ -8,6 +8,8 @@ public class Hotel {
 	private String name;
 	private int rates;
 	private String date;
+	private int weekendRate;
+	private int weekdayRate;
 	ArrayList<Hotel> al = new ArrayList<Hotel>();
 	Scanner sc = new Scanner(System.in);
 	
@@ -20,22 +22,24 @@ public class Hotel {
 	 * @param name
 	 * @param rates
 	 */
-	public Hotel(String name, int rate, String date) {
+	public Hotel(String name, int rate, String date, int weekend, int weekday) {
 		this.name=name;
 		this.rates=rate;
 		this.date=date;
+		this.weekendRate=weekend;
+		this.weekdayRate=weekday;
 		
 	}
 	/**
 	 * Method to initialize hotel
 	 */
 	public void initialize() {
-		Hotel h = new Hotel("A",250,"20aug2022");
-		Hotel h1 = new Hotel("b",255,"27aug2022");
-		Hotel h2 = new Hotel("c",256,"28aug2022");
-		Hotel h3 = new Hotel("d",257,"29aug2022");
-		Hotel h4 = new Hotel("e",258,"21aug2022");
-		Hotel h5 = new Hotel("f",259,"22aug2022");
+		Hotel h = new Hotel("A",250,"20aug2022",350,355);
+		Hotel h1 = new Hotel("b",255,"27aug2022",360,366);
+		Hotel h2 = new Hotel("c",256,"28aug2022",370,377);
+		Hotel h3 = new Hotel("d",257,"29aug2022",380,388);
+		Hotel h4 = new Hotel("e",258,"21aug2022",390,399);
+		Hotel h5 = new Hotel("f",249,"22aug2022",400,410);
 		al.add(h);
 		al.add(h1);
 		al.add(h2);
